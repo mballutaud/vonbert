@@ -40,3 +40,5 @@ devtools::check()
 #0 errors ✓ | 1 warning x | 1 note x
 devtools::install()
 #DONE (vonbert): YOUPiiiiiii
+usethis::use_git(message = ":green_heart: first package")
+#commit all files with this previous message
