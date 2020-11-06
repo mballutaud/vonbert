@@ -17,7 +17,7 @@
 saveplot <- function(plot, name, ext = "png",
                       width = 8, height = 6,
                       ...) {
-  ggplot2::ggsave(plot = plot,
+  ggsave(plot = plot,
                   filename = here::here("output", "plots", paste0(name, ".", ext)),
                   width = width,
                   height = height,
@@ -46,7 +46,7 @@ fishplot <- function(data) {
     data <- dplyr::left_join(data, Echelle, by= "specie")
     cust_labeller <- function(x) paste0("Size group:", levels(Echelle$Class))
 
-  plots <- ggplot2::ggplot(data, aes(x = age,
+  plots <- ggplot(data, aes(x = age,
         y = length,
         color = specie )) +
     geom_line() +
