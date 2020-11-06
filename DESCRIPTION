@@ -34,7 +34,14 @@ Imports:
     here,
     readr,
     dplyr,
+<<<<<<< HEAD
     rfishbase
 Depends:
     ggplot2
 
+=======
+    rfishbase,
+    rticles,
+    beepr,
+    magick
+>>>>>>> 02b72c1517ab723bab91f4e71c0590f7fb0dcf26

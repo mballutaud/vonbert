@@ -3,13 +3,11 @@
 # ----- clean workspace
 rm(list = ls())
 
-
 # ----- install/update packages
 devtools::install_deps()
 
 # ----- install compendium package
 devtools::load_all() #package installed and loaded
-
 
 #------------load data
 
@@ -20,7 +18,6 @@ espece <- c("Sphyrna lewini", "Thunnus albacares", "Mola mola")
 #------------run model
 
 data <- dataextract(espece)
-
 
 #------------product plot
 plots <- fishplot(data)
