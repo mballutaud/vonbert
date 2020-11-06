@@ -24,9 +24,13 @@ get_fish_name <- function(){
   response <- stringr::str_split(response, " ")
   response <- as.numeric(response[[1]])
   if (sum(response %in% list_species$ID)==length(response)){
-    fishlatinname <- cbind(list_species[response, 2], list_species[response, 3])
+    fishlatinname <- rbind(paste(list_species[response[1], 2], list_species[response[1], 3], sep=" "))
   } else {
     stop("sorry, try again!") #genere une error donc repete le msg entre paraenthese
+  }
+  if (length(response)>1){
+    for (i in 2:length(response) )
+      fishlatinname <- rbind(fishlatinname,paste(list_species[response[i], 2], list_species[response[i], 3], sep=" "))
   }
   return(fishlatinname)
 }
