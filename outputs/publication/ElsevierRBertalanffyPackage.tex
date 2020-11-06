@@ -56,33 +56,6 @@
 \setcounter{secnumdepth}{0}
 
 % Pandoc citation processing
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-% for Pandoc 2.8 to 2.10.1
-\newenvironment{cslreferences}%
-  {\setlength{\parindent}{0pt}%
-  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
-  {\par}
-% For Pandoc 2.11+
-\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry sp
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set line spacing
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#3\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc} % for \widthof, \maxof
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\maxof{\widthof{#1}}{\csllabelwidth}}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth}{#1}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 % Pandoc header
 
@@ -91,21 +64,19 @@
 \begin{document}
 \begin{frontmatter}
 
-  \title{Rpackage for the automatic estimation of the parameters of the
-Von Bertalanffy fish growth model}
+  \title{Rpackage for the automatic estimation of the parameters of the Von
+Bertalanffy fish growth model}
     \author[Université de Lille]{Marine Ballutaud\corref{1}}
    \ead{marine.ballutaud@univ-lille.fr} 
     \author[IFREMER]{Lyndsay Clavareau\corref{2}}
    \ead{lyndsay.clavareau@ifremer.fr} 
     \author[Observatoire Pelagis]{Etienne Rouby\corref{2}}
    \ead{etienne.rouby@univ-lr.fr} 
-    \author[Centre d'Ecologie Fonctionnelle et Evolutive]{Julien
-Renoult\corref{2}}
+    \author[Centre d'Ecologie Fonctionnelle et Evolutive]{Julien Renoult\corref{2}}
    \ead{julien.renoult@blabla.com} 
     \author[Cirad]{Fabienne Ribeyre\corref{2}}
    \ead{fabienne.ribeyre@cirad.fr} 
-      \address[Université de Lille]{Department, Street, City, State,
-Zip}
+      \address[Université de Lille]{Department, Street, City, State, Zip}
       \cortext[1]{Corresponding Author}
     \cortext[2]{Equal contribution}
   
@@ -115,31 +86,26 @@ Zip}
   
  \end{frontmatter}
 
-\hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
+\section{Introduction}\label{introduction}
 
 This package was created as part of the training course ``Good practices
 for reproducible research in digital ecology'' co-organized by the Cesab
 of the FRB and the GDR EcoStat. It uses the model de Bertalanffy (1938).
 
-\hypertarget{material-and-methods}{%
-\section{Material and methods}\label{material-and-methods}}
+\section{Material and methods}\label{material-and-methods}
 
-\hypertarget{datasource}{%
-\paragraph{Datasource}\label{datasource}}
+\paragraph{Datasource}\label{datasource}
 
 The data used comes from the website https://www.fishbase.in/home.htm.
 
-\hypertarget{statistical-methods}{%
-\paragraph{Statistical methods}\label{statistical-methods}}
+\paragraph{Statistical methods}\label{statistical-methods}
 
 The Growth model of Von Bertalanffy is \[Linf.(1-exp^{-K*(a-to)})\] with
 Linf = maximum size, a = fish age, K and t0 are fixed parameters.
 
 Model was adjusted using the method described by Rafail (1973).
 
-\hypertarget{results}{%
-\section{Results}\label{results}}
+\section{Results}\label{results}
 
 The results of the model are presented in Figure 1.
 
@@ -149,28 +115,29 @@ The results of the model are presented in Figure 1.
 \caption{Growth curve obtained with the Growth model of Von Bertalanffy}
 \end{figure}
 
-\hypertarget{discussion}{%
-\section{Discussion}\label{discussion}}
+\section{Discussion}\label{discussion}
 
 Working with others on a project is much more complicated than working
 alone, but much faster.
 
-\hypertarget{references}{%
-\section*{References}\label{references}}
+\section{Acknowledgement}\label{acknowledgement}
+
+Merci à vous c'était un super projet !
+
+\section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\begin{cslreferences}
-\leavevmode\hypertarget{ref-Bertalanffy1938}{}%
+\hypertarget{ref-Bertalanffy1938}{}
 Bertalanffy, L. von, 1938. A quantitative theory of organic growth
 (inquiries on growth laws ii). Human Biology 10, 181--213.
 
-\leavevmode\hypertarget{ref-rafail_simple_1973}{}%
+\hypertarget{ref-rafail_simple_1973}{}
 Rafail, S.Z., 1973. A simple and precise method for fitting a von
 Bertalanffy growth curve. Marine Biology 19, 354--358.
 doi:\href{https://doi.org/10.1007/BF00348907}{10.1007/BF00348907}
-\end{cslreferences}
 
 
 \end{document}
+
 

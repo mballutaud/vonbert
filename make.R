@@ -44,5 +44,5 @@ starwars <- starwars %>%
 starwars_wave <- mapply(make_sine, starwars$freq, starwars$duration) %>%
   do.call("c", .)
 audio::play(starwars_wave) #song
-magick::image_read(here::here("outputs","giphy.gif")) #gif
+gif<- magick::image_read(here::here("outputs","giphy.gif")) #gif
 
