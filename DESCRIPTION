@@ -1,15 +1,38 @@
 Package: vonbert
-Title: What the Package Does (One Line, Title Case)
+Title: FRB-Cesab project for development of a R package running the VB model
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Marine",
+           family = "Ballutaud",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
+           email = "marine.ballutaud@univ-lille.fr")
+    person(given = "Lyndsay",
+           family = "Clavareau",
+           role = c("aut", "cre"),
+           email = "lyndsay.clavareau@ifremer.fr")
+    person(given = "Etienne",
+           family = "Rouby",
+           role = c("aut", "cre"),
+           email = "etienne.rouby@univ-lr.fr")
+    person(given = "Fabienne",
+           family = "Ribeyre",
+           role = c("aut", "cre"),
+           email = "fabienne.ribeyre@cirad.fr")
+    person(given = "Julien",
+           family = "Renoult",
+           role = c("aut", "cre"),
+           email = "julien.renoult@blabla.com")
+Description: The package loads data and VB parameters from the web (on the site named FishBase) and runs the VB model. It also allows to compare growth curves among species and to produce a scientific report.
 License: MIT + file LICENSE
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Remotes: ropensci/rfishbase
+Imports: 
+    here,
+    readr,
+    ggplot2,
+    dplyr,
+    rfishbase
