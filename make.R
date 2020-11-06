@@ -9,8 +9,6 @@ devtools::install_deps()
 # ----- install compendium package
 devtools::load_all() #package installed and loaded
 
-
-
 #------------load data
 
 
@@ -18,3 +16,5 @@ devtools::load_all() #package installed and loaded
 
 
 #-----------product article
+
+rmarkdown::render(here::here("output","publication","ElsevierRBertalanffyPackage.Rmd"))
