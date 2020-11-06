@@ -51,3 +51,15 @@ duration <- c(0.33, 0.33, 0.33,
               1,  0.33, 0.33, 0.33, 1)
 tempo <- 150
 sample_rate <- 44100
+
+starwars <- dplyr::tibble(pitch = strsplit(pitch, " ")[[1]],
+                          duration = duration)
+starwars <- starwars %>%
+  dplyr::mutate(octave = substring(pitch, nchar(pitch))  %>%
+                  {suppressWarnings(as.numeric(.))} %>%
+                  ifelse(is.na(.), 4, .),
+                note = notes[substr(pitch, 1, 1)],
+                note = note + grepl("#", pitch) -
+                  grepl("b", pitch) + octave * 12 +
+                  12 * (note < 3),
+                freq = 2 ^ ((note - 60) / 12) * 440)
