@@ -18,3 +18,6 @@ devtools::load_all() #package installed and loaded
 
 
 #-----------product article
+
+rmarkdown::render(here::here("output","publication","ElsevierRBertalanffyPackage.Rmd"))
+
