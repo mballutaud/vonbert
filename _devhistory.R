@@ -49,4 +49,8 @@ usethis::use_git(message = ":green_heart: first package")
 #commit all files with this previous message
 usethis::use_r("make")
 ## pas la bonne commande!!! comment faire pour l'avoir à la racine?????
+usethis::edit_file("toto.R") # crée un fichier R à la racine
 usethis::use_r("fishname")
+for (i in 1:nrow(list_species)){
+  cat(paste0(list_species[i, 1], ": ", list_species[i, 2]," ", list_species[i, 3]),"\n") #ponctuation uk
+}
