@@ -44,3 +44,4 @@ usethis::use_git(message = ":green_heart: first package")
 #commit all files with this previous message
 usethis::use_r("make")
 ## pas la bonne commande!!! comment faire pour l'avoir à la racine?????
+usethis::use_r("fishname")
