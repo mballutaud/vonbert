@@ -33,6 +33,7 @@ Remotes: ropensci/rfishbase
 Imports: 
     here,
     readr,
+    stringr,
     dplyr,
     rticles,
     beepr,

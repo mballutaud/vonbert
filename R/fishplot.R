@@ -11,9 +11,8 @@
 #' @return
 #' @export
 #' @import ggplot2
-#'
-#' @examples
-#'
+
+
 saveplot <- function(plot, name, ext = "png",
                       width = 8, height = 6,
                       ...) {
@@ -33,8 +32,7 @@ saveplot <- function(plot, name, ext = "png",
 #' @export
 #' @import ggplot2
 #' @import dplyr
-#'
-#' @examples
+
 fishplot <- function(data) {
   data <- dplyr::mutate(data, specie = as.factor(specie))
   # repartition des poissons en groupes selon leur taille maximale
