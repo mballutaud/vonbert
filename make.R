@@ -29,5 +29,19 @@ plots <- fishplot(data)
 rmarkdown::render(here::here("outputs","publication","ElsevierRBertalanffyPackage.Rmd"))
 
 #-----------congratulations
+starwars <- dplyr::tibble(pitch = strsplit(pitch, " ")[[1]],
+                          duration = duration)
+starwars <- starwars %>%
+  dplyr::mutate(octave = substring(pitch, nchar(pitch))  %>%
+                  {suppressWarnings(as.numeric(.))} %>%
+                  ifelse(is.na(.), 4, .),
+                note = notes[substr(pitch, 1, 1)],
+                note = note + grepl("#", pitch) -
+                  grepl("b", pitch) + octave * 12 +
+                  12 * (note < 3),
+                freq = 2 ^ ((note - 60) / 12) * 440)
+
+starwars_wave <- mapply(make_sine, starwars$freq, starwars$duration) %>%
+  do.call("c", .)
 audio::play(starwars_wave) #song
 magick::image_read("giphy.gif") #gif
