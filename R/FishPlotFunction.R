@@ -25,7 +25,7 @@ save_plot <- function(plot, name, ext = "png",
 }
 
 
-#' Do plot by groups of fish with similar lengths 
+#' Do plot by groups of fish with similar lengths
 #'
 #' @param data
 #'
@@ -35,8 +35,9 @@ save_plot <- function(plot, name, ext = "png",
 #' @import dplyr
 #'
 #' @examples
-plot_fish <- function(data) {
+plotfish <- function(data) {
   data <- dplyr::mutate(data, specie = as.factor(specie))
+  # repartition des poissons en groupes selon leur taille maximale
   Echelle <- aggregate(data = data, length ~ specie, FUN = "max")
   Echelle <- dplyr::rename(Echelle, maxi = "length")
   Echelle$Class <- (Echelle$maxi - min(Echelle$maxi))/10
@@ -47,10 +48,10 @@ plot_fish <- function(data) {
   ggplot2::ggplot(data) +
     aes(x = age,
         y = length,
-        color = specie )+ 
-    geom_line() + 
+        color = specie )+
+    geom_line() +
     facet_wrap(~Class, scales= "free_y", labeller = as_labeller(cust_labeller))+
        theme_bw() +
-        xlab("Age of fish (years)") 
-       ylab("Estimated length (cm)")  
+        xlab("Age of fish (years)")
+       ylab("Estimated length (cm)")
 }
