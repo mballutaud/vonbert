@@ -8,6 +8,8 @@ devtools::install_deps()
 
 # ----- install compendium package
 devtools::load_all() #package installed and loaded
+# tips for LINUX: if you have 'error in configuration' for installing package 'magick' with Ubuntu 20.04.1 LTS
+# paste this command in your terminal: sudo apt install libmagick++-dev
 
 #------------load data
 

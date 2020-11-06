@@ -20,6 +20,7 @@ usethis::use_package("ggplot2")
 usethis::use_package("magick")
 usethis::use_package("beepr")
 usethis::use_package("audio")
+usethis::use_package("magrittr")
 #✓ Adding 'here' and 'readr'+ others packages to Imports field in DESCRIPTION
 usethis::use_pipe()
 #to find and use the function "%>%"
