@@ -18,20 +18,14 @@ devtools::load_all() #package installed and loaded
 espece <- c("Sphyrna lewini", "Thunnus albacares", "Mola mola")
 
 #------------run model
-<<<<<<< HEAD
 
-=======
->>>>>>> 40cee7176b393885694fd321adb194fe68431151
 data <- dataextract(espece)
-plotfish(data)
 
-<<<<<<< HEAD
+
 #------------product plot
 plots <- fishplot(data)
 # saveplot(plots)
 
-=======
->>>>>>> 40cee7176b393885694fd321adb194fe68431151
 #-----------product article
 
 rmarkdown::render(here::here("outputs","publication","ElsevierRBertalanffyPackage.Rmd"))
