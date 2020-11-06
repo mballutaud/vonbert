@@ -1,4 +1,4 @@
-data_extract <- function(fishlatinname, parameters = FALSE, t0 = NULL, K = NULL){
+dataextract <- function(fishlatinname, parameters = FALSE, t0 = NULL, K = NULL){
 
   if(parameters == FALSE) { # In the case where the parameters are not know
 
