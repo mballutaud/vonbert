@@ -22,7 +22,7 @@ dataextract <- function(fishlatinname, parameters = FALSE, t0 = NULL, K = NULL){
     age <- seq(0,30,1)
     dd <- data.frame(specie = data$Species[i],
                      age = age,
-                     length = data$Length[i] * (1 - exp(-data$K[i] * (age - data$t0[i]))))
+                     length = growthmodel(Linf = data$Length[i], K = data$K[i], t0 = data$t0[i], a = age))
 
     final_dd <- rbind(final_dd, dd)
     rm(dd)
@@ -32,7 +32,7 @@ dataextract <- function(fishlatinname, parameters = FALSE, t0 = NULL, K = NULL){
     age <- seq(0, data$LongevityWild[i], 1)
     dd <- data.frame(specie = data$Species[i],
                        age = age,
-                       length = data$Length[i] * (1 - exp(-data$K[i] * (age - data$t0[i]))))
+                       length = growthmodel(Linf = data$Length[i], K = data$K[i], t0 = data$t0[i], a = age))
 
       final_dd <- rbind(final_dd, dd)
       rm(dd)

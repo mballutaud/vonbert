@@ -8,6 +8,6 @@
 #' @export
 #'
 #' @examples
-growthmodel <- function(Linf, K, t0){
-  Linf*(1-exp(-K*(a-t0)))
+growthmodel <- function(Linf, K, t0, a){
+  Linf * (1 - exp(-K *(a - t0)))
 }
