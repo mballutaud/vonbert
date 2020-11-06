@@ -11,26 +11,20 @@ devtools::load_all() #package installed and loaded
 # tips for LINUX: if you have 'error in configuration' for installing package 'magick' with Ubuntu 20.04.1 LTS
 # paste this command in your terminal: sudo apt install libmagick++-dev
 
-#------------load data
-
-#test <- "Please first choose a latin names or a vector containing latin names"
-# espece <- c("Sphyrna lewini", "Thunnus albacares", "Mola mola")
-
+#------------run list of fish species in csv and function to select species
 espece <- get_fish_name()
 
-#------------run model
-
+#------------run function to extract data for selected species from FishBase
 data <- dataextract(espece)
 
-#------------product plot
+#------------product plot of growth curve using VB model
 plots <- fishplot(data)
 # saveplot(plots)
 
-#-----------product article
-
+#-----------product article in format of Elsevier
 rmarkdown::render(here::here("outputs","publication","ElsevierRBertalanffyPackage.Rmd"))
 
-#-----------congratulations
+#-----------congratulations for the job!
 starwars <- dplyr::tibble(pitch = strsplit(pitch, " ")[[1]],
                           duration = duration)
 starwars <- starwars %>%
@@ -47,3 +41,4 @@ starwars_wave <- mapply(make_sine, starwars$freq, starwars$duration) %>%
   do.call("c", .)
 audio::play(starwars_wave) #song
 magick::image_read(here::here("outputs","giphy.gif")) #gif
+

@@ -86,6 +86,10 @@ Discussion
 
 Working with others on a project is much more complicated than working alone, but much faster.
 
+Acknowledgement
+==========
+Merci à vous c'était un super projet !
 
 References {#references .unnumbered}
 ==========
+
