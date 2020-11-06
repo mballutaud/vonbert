@@ -1,14 +1,14 @@
-starwars <- dplyr::tibble(pitch = strsplit(pitch, " ")[[1]],
-                   duration = duration)
-starwars <- starwars %>%
-  dplyr::mutate(octave = substring(pitch, nchar(pitch))  %>%
-           {suppressWarnings(as.numeric(.))} %>%
-           ifelse(is.na(.), 4, .),
-         note = notes[substr(pitch, 1, 1)],
-         note = note + grepl("#", pitch) -
-           grepl("b", pitch) + octave * 12 +
-           12 * (note < 3),
-         freq = 2 ^ ((note - 60) / 12) * 440)
+#' Function to play the song and gif
+#'
+#' @param freq
+#' @param duration
+#' @param make_sine
+#' @param starwars
+#'
+#' @return
+#' @export
+#'
+#' @examples
 
 make_sine <- function(freq, duration) {
   wave <- sin(seq(0, duration / tempo * 60, 1 / sample_rate) *
