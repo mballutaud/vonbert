@@ -14,7 +14,7 @@
 #'
 #' @examples
 #'
-save_plot <- function(plot, name, ext = "png",
+saveplot <- function(plot, name, ext = "png",
                       width = 8, height = 6,
                       ...) {
   ggplot2::ggsave(plot = plot,
