@@ -63,7 +63,7 @@ The data used comes from the website https://www.fishbase.in/home.htm.
 #### Statistical methods
 
 The Growth model of Von Bertalanffy is $$Linf.(1-exp^{-K*(a-to)})$$
-with Linf = ???, K = ??? and t0 = ???.
+with Linf = maximum size, a = fish age, K and t0 are fixed parameters.
 
 Model was adjusted using the method described by  @rafail_simple_1973.
 
