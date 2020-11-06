@@ -36,7 +36,7 @@ Imports:
     dplyr,
     rticles,
     beepr,
-    magick
+    magick,
     rfishbase
 Depends:
     ggplot2
