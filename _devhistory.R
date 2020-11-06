@@ -15,6 +15,8 @@ usethis::use_package("readr")
 usethis::use_package("rfishbase")
 usethis::use_package("dplyr")
 usethis::use_package("ggplot2")
+usethis::use_package("magick")
+usethis::use_package("beepr")
 #✓ Adding 'here' and 'readr' to Imports field in DESCRIPTION
 rrtools::use_readme_rmd()
 #✓ Creating 'README.Rmd' from template.

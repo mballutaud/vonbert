@@ -35,4 +35,6 @@ Imports:
     readr,
     ggplot2,
     dplyr,
-    rfishbase
+    rfishbase,
+    beepr,
+    magick
