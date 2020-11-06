@@ -33,11 +33,13 @@ Remotes: ropensci/rfishbase
 Imports: 
     here,
     readr,
+    stringr,
     dplyr,
     rticles,
     beepr,
     magick,
-    rfishbase
+    rfishbase,
+    audio,
+    magrittr
 Depends:
     ggplot2
-

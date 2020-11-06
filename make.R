@@ -28,3 +28,6 @@ plots <- fishplot(data)
 
 rmarkdown::render(here::here("outputs","publication","ElsevierRBertalanffyPackage.Rmd"))
 
+#-----------congratulations
+audio::play(starwars_wave) #song
+magick::image_read("giphy.gif") #gif

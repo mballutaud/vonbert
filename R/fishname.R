@@ -9,10 +9,11 @@ get_fish_name <- function(){
 
 
   cat(msg)
-  response <- readline(prompt="Choose a species by selecting its ID number, enter your ANSWER: ")
-  response <- as.numeric(response)
-  if (response %in% list_species$ID){
-    fishlatinname <- paste(list_species[response, 2], list_species[response, 3])
+  response <- readline(prompt="Choose species by selecting its ID numbers separate by a blanck, enter your ANSWER: ")
+  response <- stringr::str_split(response, " ")
+  response <- as.numeric(response[[1]])
+  if (sum(response %in% list_species$ID)==length(response)){
+    fishlatinname <- cbind(list_species[response, 2], list_species[response, 3])
   } else {
     stop("sorry, try again!") #genere une error donc repete le msg entre paraenthese
   }
