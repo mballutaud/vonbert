@@ -18,8 +18,13 @@ devtools::load_all() #package installed and loaded
 espece <- c("Sphyrna lewini", "Thunnus albacares", "Mola mola")
 
 #------------run model
+
 data <- dataextract(espece)
-plotfish(data)
+
+
+#------------product plot
+plots <- fishplot(data)
+# saveplot(plots)
 
 #-----------product article
 
