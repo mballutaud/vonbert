@@ -34,12 +34,12 @@ Imports:
     here,
     readr,
     stringr,
-    dplyr,
     rticles,
     beepr,
     magick,
     rfishbase,
-    audio,
-    magrittr
+    audio
 Depends:
-    ggplot2
+    ggplot2,
+    dplyr,
+    magrittr
