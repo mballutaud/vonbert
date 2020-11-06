@@ -7,6 +7,8 @@
 #'
 #' @return
 #' @export
+#' @import dplyr
+#' @import magick
 #'
 #' @examples
 
