@@ -17,7 +17,10 @@ usethis::use_package("dplyr")
 usethis::use_package("ggplot2")
 usethis::use_package("magick")
 usethis::use_package("beepr")
+usethis::use_package("audio")
 #✓ Adding 'here' and 'readr' to Imports field in DESCRIPTION
+usethis::use_pipe()
+#to find and use the function "%>%"
 rrtools::use_readme_rmd()
 #✓ Creating 'README.Rmd' from template.
 #✓ Adding 'README.Rmd' to `.Rbuildignore`.
@@ -49,8 +52,13 @@ usethis::use_git(message = ":green_heart: first package")
 #commit all files with this previous message
 usethis::use_r("make")
 ## pas la bonne commande!!! comment faire pour l'avoir à la racine?????
-usethis::edit_file("toto.R") # crée un fichier R à la racine
+usethis::edit_file("toto.R")
+#create a R file in the main branche
 usethis::use_r("fishname")
+#create a Rfile in the R\ repertory
 for (i in 1:nrow(list_species)){
-  cat(paste0(list_species[i, 1], ": ", list_species[i, 2]," ", list_species[i, 3]),"\n") #ponctuation uk
+  cat(paste0(list_species[i, 1], ": ", list_species[i, 2]," ", list_species[i, 3]),"\n") #ponctuation UK
 }
+## test with Nicolas C.
+usethis::use_r("congratulations")
+#starwars song and gif
