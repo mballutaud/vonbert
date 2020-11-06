@@ -33,6 +33,5 @@ Remotes: ropensci/rfishbase
 Imports: 
     here,
     readr,
-    rfishbase,
     ggplot2,
     dplyr
