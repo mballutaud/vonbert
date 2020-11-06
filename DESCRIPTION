@@ -6,7 +6,22 @@ Authors@R:
            family = "Ballutaud",
            role = c("aut", "cre"),
            email = "marine.ballutaud@univ-lille.fr")
-    #ajouter vous noms ;)
+    person(given = "Lyndsay",
+           family = "Clavareau",
+           role = c("aut", "cre"),
+           email = "lyndsay.clavareau@ifremer.fr")
+    person(given = "Etienne",
+           family = "Rouby",
+           role = c("aut", "cre"),
+           email = "etienne.rouby@blabla.com")
+    person(given = "Fabienne",
+           family = "Ribeyre",
+           role = c("aut", "cre"),
+           email = "fabienne.ribeyre@cirad.fr")
+    person(given = "Julien",
+           family = "Renoult",
+           role = c("aut", "cre"),
+           email = "julien.renoult@blabla.com")
 Description: The package loads data and VB parameters from the web (on the site named FishBase) and runs the VB model. It also allows to compare growth curves among species and to produce a scientific report.
 License: MIT + file LICENSE
 ByteCompile: true
@@ -16,4 +31,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     here,
-    readr
+    readr,
+    rfishbase,
+    ggplot2,
+    dplyr

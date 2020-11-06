@@ -44,7 +44,7 @@ The **analysis** directory contains:
 ## How to run in your broswer or download and run locally
 
 This research compendium has been developed using the statistical
-programming language R. To work with the compendium, you will need
+programming language R version > 4.0.0. To work with the compendium, you will need
 installed on your computer the [R
 software](https://cloud.r-project.org/) itself and optionally [RStudio
 Desktop](https://rstudio.com/products/rstudio/download/).
