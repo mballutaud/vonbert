@@ -12,6 +12,9 @@ usethis::use_r("growthmodel")
 #create file in \R, modify 'R/growthmodel.R' and open the file
 usethis::use_package("here")
 usethis::use_package("readr")
+usethis::use_package("rfishbase")
+usethis::use_package("dplyr")
+usethis::use_package("ggplot2")
 #✓ Adding 'here' and 'readr' to Imports field in DESCRIPTION
 rrtools::use_readme_rmd()
 #✓ Creating 'README.Rmd' from template.
