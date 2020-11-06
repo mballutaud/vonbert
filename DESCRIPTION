@@ -13,7 +13,7 @@ Authors@R:
     person(given = "Etienne",
            family = "Rouby",
            role = c("aut", "cre"),
-           email = "etienne.rouby@blabla.com")
+           email = "etienne.rouby@univ-lr.fr")
     person(given = "Fabienne",
            family = "Ribeyre",
            role = c("aut", "cre"),
