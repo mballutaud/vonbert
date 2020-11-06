@@ -1,3 +1,14 @@
+
+#' Get fish names
+#'
+#'
+#' @return species names
+#' @export
+#' @import
+#' @importFrom readr read_csv
+#' @importFrom stringr str_split
+
+
 get_fish_name <- function(){
   list_species <- readr::read_csv(here::here("data","list-species.csv"))
 
