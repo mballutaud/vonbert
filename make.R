@@ -20,3 +20,6 @@ espece <- c("Sphyrna lewini", "Thunnus albacares", "Mola mola")
 test <- dataextract(espece)
 plotfish(test)
 #-----------product article
+
+rmarkdown::render(here::here("output","publication","ElsevierRBertalanffyPackage.Rmd"))
+
