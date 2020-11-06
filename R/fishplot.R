@@ -35,7 +35,7 @@ save_plot <- function(plot, name, ext = "png",
 #' @import dplyr
 #'
 #' @examples
-plotfish <- function(data) {
+fishplot <- function(data) {
   data <- dplyr::mutate(data, specie = as.factor(specie))
   # repartition des poissons en groupes selon leur taille maximale
   Echelle <- aggregate(data = data, length ~ specie, FUN = "max")
