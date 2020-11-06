@@ -16,4 +16,3 @@ make_sine <- function(freq, duration) {
   fade <- seq(0, 1, 50 / sample_rate)
   wave * c(fade, rep(1, length(wave) - 2 * length(fade)), rev(fade))
 }
-
