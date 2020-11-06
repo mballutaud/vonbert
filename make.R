@@ -9,8 +9,6 @@ devtools::install_deps()
 # ----- install compendium package
 devtools::load_all() #package installed and loaded
 
-
-
 #------------load data
 espece <- "Salmo salar"
 data <- dataextract(espece)
