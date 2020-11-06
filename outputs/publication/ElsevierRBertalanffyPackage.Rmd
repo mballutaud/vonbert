@@ -76,7 +76,6 @@ The results of the model are presented in Figure 1.
 
 ```{r , eval = TRUE, echo=FALSE, fig.cap= "Growth curve obtained with the Growth model of Von Bertalanffy"}
 data <- dataextract(espece)
-# model <- growthmodel(data)
 fishplot(data)
 
 ```
