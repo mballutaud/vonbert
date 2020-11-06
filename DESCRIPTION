@@ -34,4 +34,5 @@ Imports:
     here,
     readr,
     ggplot2,
-    dplyr
+    dplyr,
+    rfishbase
